@@ -1,0 +1,70 @@
+/* src/components/Header.css */
+
+.site-header {
+    padding: 24px 0; 
+    background-color: transparent; 
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100; 
+    backdrop-filter: blur(5px); 
+  }
+  
+  /* Memanfaatkan .container yang didefinisikan di index.css */
+  .site-header .container {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+  }
+  
+  /* --- Logo Styling --- */
+  .logo a {
+    font-family: var(--font-heading);
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--color-teks-utama);
+    transition: var(--transisi-default);
+  }
+  
+  .logo a:hover {
+    color: var(--color-aksen-utama); 
+  }
+  
+  /* --- Navigasi Link Styling --- */
+  .main-nav {
+    display: flex;
+    gap: 32px; 
+    align-items: center;
+  }
+  
+  .nav-link {
+    color: var(--color-teks-sekunder);
+    font-family: var(--font-body);
+    font-size: 16px;
+    transition: var(--transisi-default);
+  }
+  
+  .nav-link:hover {
+    color: var(--color-hover-link); 
+  }
+  
+  /* --- Tombol Kontak Styling --- */
+  .contact-btn {
+    /* Default: Putih transparan */
+    border: 1px solid var(--color-border-halus); 
+    padding: 10px 20px;
+    border-radius: 4px;
+    color: var(--color-aksen-utama);
+    background-color: transparent;
+    transition: var(--transisi-default);
+    font-weight: 500;
+  }
+  
+  .contact-btn:hover {
+    /* Hover: background putih, teks hitam, shadow halus */
+    background-color: var(--color-aksen-utama); 
+    color: var(--color-background-utama); 
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1); 
+    transform: translateY(-2px); 
+  }

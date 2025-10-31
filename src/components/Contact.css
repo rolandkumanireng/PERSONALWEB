@@ -1,0 +1,80 @@
+/* src/components/Contact.css */
+
+.contact-section {
+    padding: 100px 0;
+    text-align: center;
+  }
+  
+  .contact-intro {
+    max-width: 600px;
+    margin: 0 auto 40px auto;
+    font-size: 18px;
+  }
+  
+  /* --- Form Container --- */
+  .contact-form {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 40px;
+    /* Card / container: #181818 */
+    background-color: var(--color-card-container); 
+    border-radius: 8px;
+    border: 1px solid var(--color-border-halus);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+    text-align: left;
+  }
+  
+  /* --- Form Groups (Input/Textarea) --- */
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--color-teks-utama);
+    font-family: var(--font-body);
+  }
+  
+  .contact-form input[type="text"],
+  .contact-form input[type="email"],
+  .contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    /* Warna input sesuai tema gelap */
+    background-color: var(--color-background-utama); 
+    border: 1px solid var(--color-border-halus);
+    color: var(--color-teks-utama);
+    border-radius: 4px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+  }
+  
+  .contact-form input:focus,
+  .contact-form textarea:focus {
+    border-color: var(--color-aksen-utama); /* Border putih saat fokus */
+    outline: none;
+  }
+  
+  /* --- Tombol Submit (Gaya CTA) --- */
+  .submit-btn {
+    /* Gaya Tombol Aksen Utama */
+    display: block;
+    width: 100%;
+    padding: 14px;
+    background-color: var(--color-aksen-utama); 
+    color: var(--color-background-utama);
+    border: none;
+    border-radius: 4px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transisi-default);
+  }
+  
+  .submit-btn:hover {
+    background-color: var(--color-hover-link);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
+  }

@@ -1,0 +1,103 @@
+/* src/components/Hero.css */
+
+.hero-section {
+    /* Padding yang besar untuk negative space */
+    padding: 160px 0 120px 0; 
+    /* Memastikan Hero Section mengambil setidaknya tinggi viewport, dikurangi header */
+    min-height: 100vh;
+    display: flex;
+    align-items: center; /* Konten di tengah vertikal */
+  }
+  
+  /* --- Teks & Tipografi --- */
+  
+  .hero-content {
+    max-width: 800px; /* Batasi lebar teks agar mudah dibaca */
+  }
+  
+  .hero-intro {
+    font-size: 18px;
+    margin-bottom: 8px;
+  }
+  
+  .hero-heading {
+    font-size: var(--font-size-h1); /* 56px */
+    margin-bottom: 24px;
+    line-height: 1.1; /* Lebih rapat */
+  }
+  
+  .hero-heading .highlight {
+    /* Memberi aksen pada kata kunci */
+    color: var(--color-aksen-utama); 
+    /* Bisa ditambahkan garis bawah lembut atau shadow jika diinginkan */
+  }
+  
+  .hero-description {
+    font-size: var(--font-size-body); /* 18px */
+    color: var(--color-teks-sekunder);
+    margin-bottom: 40px;
+    max-width: 650px;
+  }
+  
+  /* --- Tombol Aksi (Sama seperti Contact Button di Header, tapi lebih besar) --- */
+  .hero-actions {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+  }
+  
+  .cta-btn {
+    /* Mirip contact-btn, tapi mungkin lebih menonjol */
+    background-color: var(--color-aksen-utama); 
+    color: var(--color-background-utama);
+    padding: 14px 30px;
+    border-radius: 4px;
+    font-weight: 600;
+    transition: var(--transisi-default);
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
+  }
+  
+  .cta-btn:hover {
+    background-color: var(--color-hover-link); 
+    transform: translateY(-2px); 
+  }
+  
+  .text-link {
+    color: var(--color-teks-sekunder);
+    font-weight: 500;
+    transition: var(--transisi-default);
+  }
+  
+  .text-link:hover {
+    color: var(--color-aksen-utama);
+  }
+
+  @keyframes slideUpFade {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Kelas Dasar Animasi */
+  .animate-fade-slide {
+    opacity: 0; /* Sembunyikan elemen secara default */
+    animation: slideUpFade 0.6s ease-out forwards;
+  }
+  
+  /* Penundaan (Delay) untuk Efek Berurutan */
+  .delay-1 {
+    animation-delay: 0.2s;
+  }
+  
+  .delay-2 {
+    animation-delay: 0.4s;
+  }
+  
+  .delay-3 {
+    animation-delay: 0.6s;
+  }

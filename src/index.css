@@ -1,0 +1,81 @@
+/* src/index.css */
+
+/* --- CSS RESET & BOX SIZING --- */
+*, *::before, *::after {
+  box-sizing: border-box; 
+}
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased; 
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden; /* Mencegah bug scroll horizontal pada body */
+}
+a {
+  text-decoration: none;
+  color: inherit; 
+}
+
+/* --- VARIABEL GLOBAL (TEMA WARNA & FONT) --- */
+:root {
+  /* 🎨 Palet Warna */
+  --color-background-utama: #111111;
+  --color-card-container: #181818;
+  --color-teks-utama: #F5F5F5;
+  --color-teks-sekunder: #AAAAAA;
+  --color-aksen-utama: #FFFFFF;
+  --color-hover-link: #E0E0E0;
+  --color-hover-card: #1F1F1F;
+  --color-border-halus: rgba(255,255,255,0.08);
+  --shadow-default: rgba(0,0,0,0.4);
+
+  /* 🔠 Font */
+  --font-heading: 'Montserrat', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  
+  /* 🖱️ Transisi */
+  --transisi-default: all 0.3s ease;
+  
+  /* Ukuran Font */
+  --font-size-h1: 56px;
+  --font-size-h2: 36px;
+  --font-size-body: 18px; 
+}
+
+/* --- TEMA BODY APLIKASI --- */
+body {
+  background-color: var(--color-background-utama);
+  color: var(--color-teks-utama);
+  font-family: var(--font-body);
+  font-size: var(--font-size-body); 
+  line-height: 1.6;
+  background-image: linear-gradient(180deg, #111111 0%, #1A1A1A 100%); 
+  min-height: 100vh;
+}
+
+.App {
+    overflow-x: hidden; /* Mencegah bug scroll horizontal di elemen terluar */
+}
+
+/* Styling global untuk container/grid simetris */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px; 
+}
+
+/* Kelas untuk teks sekunder (Inter Light) */
+.text-secondary {
+  color: var(--color-teks-sekunder);
+  font-weight: 300; 
+}
+
+/* --- STYLING HEADING (TIPOGRAFI) --- */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 600; 
+  line-height: 1.2;
+  margin-top: 0;
+  margin-bottom: 0.5em;
+}
+h1 { font-size: var(--font-size-h1); }
+h2 { font-size: var(--font-size-h2); }

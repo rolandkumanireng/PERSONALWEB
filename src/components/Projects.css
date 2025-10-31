@@ -1,0 +1,114 @@
+/* src/components/Projects.css */
+
+.projects-section {
+  padding: 100px 0; 
+  padding-bottom: 120px; /* Ruang ekstra untuk visual */
+  /* Menetapkan tinggi minimum agar card flex-grow dapat berfungsi */
+  min-height: 500px; 
+}
+
+.section-title {
+  color: var(--color-aksen-utama);
+  text-align: left; 
+  margin-bottom: 40px; 
+}
+
+/* --- Layout Horizontal Scroll & Drag --- */
+
+.projects-grid {
+  display: flex; 
+  flex-wrap: nowrap; 
+  gap: 30px; 
+  padding: 20px 40px; 
+  
+  overflow-x: auto; /* WAJIB: Memungkinkan gulir horizontal */
+  overflow-y: hidden; 
+  
+  /* Memberi isyarat visual untuk fungsi drag (diimplementasikan di JS) */
+  cursor: grab; 
+  
+  /* Memungkinkan momentum scrolling di perangkat sentuh */
+  -webkit-overflow-scrolling: touch; 
+  scroll-behavior: smooth;
+  
+  /* Transisi dan user-select untuk pengalaman drag yang lebih baik */
+  transition: all 0.2s;
+  user-select: none; 
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  
+  /* --- Menyembunyikan Scrollbar Bawah --- */
+  
+  /* Hilangkan scrollbar untuk Chrome, Safari, dan Opera */
+  &::-webkit-scrollbar {
+    display: none; 
+  }
+
+  /* Hilangkan scrollbar untuk IE dan Edge */
+  -ms-overflow-style: none;  
+  
+  /* Hilangkan scrollbar untuk Firefox */
+  scrollbar-width: none;     
+}
+
+/* Kursor berubah saat mouse sedang ditekan/diseret (memerlukan JS: .classList.add('active-drag')) */
+.projects-grid.active-drag,
+.projects-grid.dragging {
+  cursor: grabbing; /* Ikon tangan mencengkeram */
+  transform: scale(1.005); /* Efek visual halus saat drag */
+  scroll-behavior: auto;
+}
+
+/* Mencegah pointer events pada card saat drag */
+.projects-grid.dragging .project-card {
+  pointer-events: none;
+}
+
+/* --- Ukuran Card Seragam --- */
+.projects-grid .project-card {
+    /* Mencegah shrinking dan growing, mempertahankan lebar 350px */
+    flex: 0 0 auto; 
+    width: 350px; 
+    
+    /* WAJIB: Memastikan semua kartu mengambil tinggi maksimum dari container flex */
+    height: 420px; /* Tinggi tetap untuk semua kartu */
+    
+    /* Mencegah resize */
+    min-width: 350px;
+    max-width: 350px;
+    min-height: 420px;
+    max-height: 420px;
+    
+    /* Mencegah drag pada elemen */
+    -webkit-user-drag: none;
+    user-drag: none;
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 768px) {
+  .projects-grid {
+    padding: 20px 20px;
+    gap: 20px;
+  }
+  
+  .projects-grid .project-card {
+    width: 300px;
+    height: 380px;
+    min-width: 300px;
+    max-width: 300px;
+    min-height: 380px;
+    max-height: 380px;
+  }
+}
+
+@media (max-width: 480px) {
+  .projects-grid .project-card {
+    width: 280px;
+    height: 360px;
+    min-width: 280px;
+    max-width: 280px;
+    min-height: 360px;
+    max-height: 360px;
+  }
+}
