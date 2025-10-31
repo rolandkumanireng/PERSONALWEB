@@ -1,46 +1,69 @@
 // src/App.jsx
 
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Header from './components/Header';
-import Hero from './components/Hero'; 
-import About from './components/About';      // <-- Pastikan diimpor!
-import Projects from './components/Projects'; 
-import Contact from './components/Contact';
-import Footer from './components/Footer'; 
-import PdfViewerPage from './components/PdfViewerPage'; 
-import ScrollToTop from './components/ScrollToTop';// Komponen Viewer PDF
+// KUNCI PERUBAHAN: Ganti BrowserRouter menjadi HashRouter untuk kompatibilitas GitHub Pages
+import { HashRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 
+// Import Komponen Utama
+import Header from './components/Header';
+import Hero from './components/Hero';
+import About from './components/About';
+import Projects from './components/Projects';
+import Contact from './components/Contact';
+import Footer from './components/Footer';
+import PdfViewerPage from './components/PdfViewerPage';
+import ScrollToTop from './components/ScrollToTop';
+
+// Komponen Pembungkus untuk Layout Halaman Utama
+const HomeLayout = () => (
+    <>
+        <Hero />
+        <About />
+        <Projects /> 
+        <Contact /> 
+    </>
+);
+
+// Konten Aplikasi yang Menggunakan Hooks (Harus di dalam Router)
+function AppContent() {
+    const location = useLocation();
+    
+    // Logika untuk menyembunyikan Header/Footer di halaman PDF Viewer
+    const isViewerPage = location.pathname.startsWith('/view/');
+
+    return (
+        <div className="App">
+            
+            {/* Header hanya tampil jika BUKAN halaman Viewer */}
+            {!isViewerPage && <Header />} 
+            
+            <main>
+                <Routes>
+                    
+                    {/* Rute Halaman Utama (Homepage) */}
+                    <Route path="/" element={<HomeLayout />} />
+                    
+                    {/* Rute PDF Viewer (halaman penuh) */}
+                    <Route path="/view/:id" element={<PdfViewerPage />} />
+                    
+                </Routes>
+            </main>
+            
+            {/* Footer hanya tampil jika BUKAN halaman Viewer */}
+            {!isViewerPage && <Footer />} 
+        </div>
+    );
+}
+
+// Komponen Utama yang membungkus HashRouter
 function App() {
-  return (
-    <Router>
-      <ScrollToTop />
-      <div className="App">
-        <Header /> 
-        
-        <main>
-          <Routes>
-            
-            {/* Rute Halaman Utama (Homepage) */}
-            <Route path="/" element={
-              <>
-                <Hero />
-                <About /> {/* <-- SECTION ABOUT ME SUDAH DIMASUKKAN DI SINI */}
-                <Projects /> 
-                <Contact /> 
-              </>
-            } />
-            
-            {/* Rute PDF Viewer */}
-            <Route path="/view/:id" element={<PdfViewerPage />} />
-            
-          </Routes>
-        </main>
-        
-        <Footer /> 
-      </div>
-    </Router>
-  );
+    return (
+        // Menggunakan HashRouter (Router yang menggunakan # di URL)
+        <Router>
+            <ScrollToTop /> 
+            <AppContent />
+        </Router>
+    );
 }
 
 export default App;
