@@ -10,7 +10,8 @@ const Header = () => {
         {/* Logo/Nama Anda */}
         <div className="logo">
           <a href="#home">
-            **Nama Anda.**
+           Roland Philip Boli Kumanireng
+
           </a>
         </div>
         

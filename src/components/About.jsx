@@ -19,7 +19,7 @@ const About = () => {
             {/* Tempat Anda Memasukkan Foto (Ganti src!) */}
             <div className="profile-image-container">
               <img 
-                src="/images/PROFILE.jpeg" // GANTI DENGAN PATH FOTO ANDA di folder public/images/
+                src="/PERSONAL-WEB/images/PROFILE.jpeg" // Path yang disesuaikan dengan base URL deployment
                 alt="Foto Profil Anda"
                 className="profile-image"
               />
@@ -28,30 +28,28 @@ const About = () => {
             </div>
             
             <div className="current-focus card-container-style">
-              <h4 className="focus-title">Fokus Saat Ini</h4>
-              <p className="text-secondary">Mempelajari *Full-Stack Development* dengan **React** dan **Node.js**, serta mendalami *DevOps* dan *Clean Architecture*.</p>
+             
+              <p className="text-secondary">"Living Young and Wild and Free"</p>
             </div>
           </div>
           
           {/* Kolom Kanan: Biografi & Keahlian */}
           <div className="about-text-wrapper">
-            <h3 className="sub-heading">Pendekatan Saya dalam Pengembangan Perangkat Lunak</h3>
+            {/* <h3 className="sub-heading">Pendekatan Saya dalam Pengembangan Perangkat Lunak</h3> */}
             
             <p className="bio-text text-secondary">
-              Saya memiliki latar belakang di **Software Quality Assurance (SQA)** dan pengujian sistem. Saya berpegangan pada prinsip *Test-Driven Development* (TDD) dan *Clean Code* untuk memastikan solusi digital yang saya buat tidak hanya berfungsi, tetapi juga aman dan mudah dipelihara.
+            I made this website using React
             </p>
             
-            <p className="bio-text text-secondary">
-              Portofolio ini menyoroti keahlian saya dalam otomatisasi (Cypress, Selenium), perencanaan pengujian, dan pemahaman mendalam tentang *testing lifecycle* dan metodologi pengujian modern.
-            </p>
+           
             
             <h3 className="sub-heading mt-40">Keahlian Teknis</h3>
             <div className="skills-grid">
-              <span className="skill-tag">JavaScript (ES6+)</span>
-              <span className="skill-tag">React / Redux</span>
+              <span className="skill-tag">JavaScript</span>
+              <span className="skill-tag">React</span>
               <span className="skill-tag">Cypress / Selenium</span>
-              <span className="skill-tag">Node.js / Express</span>
-              <span className="skill-tag">PostgreSQL / MongoDB</span>
+       
+             
               <span className="skill-tag">Git / GitHub</span>
             </div>
           </div>

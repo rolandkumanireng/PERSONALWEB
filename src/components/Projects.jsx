@@ -4,63 +4,55 @@ import React, { useRef, useState } from 'react';
 import ProjectCard from './ProjectCard';
 import './Projects.css';
 
-// --- DATA PROYEK DENGAN NAMA FILE ASLI ---
+// --- DATA PROYEK DIURUTKAN DARI 1 HINGGA 8 ---
 const projectData = [
-  // 1. KELOMPOK 1
   {
     title: "Strategi & Klasifikasi Software Testing",
     description: "Mengulas konsep dasar, tujuan, siklus hidup, serta klasifikasi pengujian (Unit, System, Fungsional, Black/White Box).",
     tags: ["Testing Strategy", "STLC", "Black Box", "White Box"],
-    link: "/Kelompok 1-compressed.pdf"
+    link: "/PERSONAL-WEB/Kelompok 1-compressed.pdf"
   },
-  // 2. KELOMPOK 2
-  {
-    title: "Aspek UI/UX Testing",
-    description: "Membahas perbedaan pengujian UI (tampilan visual) dan UX (pengalaman pengguna), mencakup Responsivitas, Kompatibilitas, dan Aksesibilitas.",
-    tags: ["UI/UX", "Usability", "A/B Testing", "Accessibility"],
-    link: "/Kelompok 2.pdf"
-  },
-  // 3. KELOMPOK 3
   {
     title: "Penyusunan Testing Plan",
     description: "Dokumen panduan yang menjelaskan strategi pengujian, ruang lingkup, kriteria lulus/gagal (IEEE 829), risiko, dan jadwal pelaksanaan.",
     tags: ["Testing Plan", "QA Document", "Strategy", "IEEE 829"],
-    link: "/Kelompok 3.pdf"
+    link: "/PERSONAL-WEB/Kelompok 3_compressed.pdf"
   },
-  // 4. KELOMPOK 4
   {
     title: "Test Scenario, Test Case & Bug Report",
     description: "Panduan membuat skenario pengujian, langkah detail pengujian, hingga format standar laporan kesalahan (Bug Report) termasuk Severity dan Priority.",
     tags: ["Test Case", "Bug Report", "Test Scenario", "SQA"],
-    link: "/Kelompok 4_compressed.pdf"
+    link: "/PERSONAL-WEB/Kelompok 4_compressed.pdf"
   },
-  // 5. KELOMPOK 5
   {
     title: "Prinsip Dasar Unit Testing",
     description: "Mempelajari pengujian unit terkecil dalam kode, pentingnya, dan pola penulisan tes menggunakan AAA (Arrange, Act, Assert) dan framework (Jest, JUnit, Pytest).",
     tags: ["Unit Testing", "AAA Pattern", "Jest", "TDD"],
-    link: "/Kelompok 5.pdf"
+    link: "/PERSONAL-WEB/Kelompok 5_compressed.pdf"
   },
-  // 6. KELOMPOK 6
   {
     title: "Pengujian API (API Testing)",
     description: "Menganalisis anatomi Request & Response API dan cara melakukan pengujian API menggunakan tools seperti Postman dan SOAPUI.",
     tags: ["API Testing", "Postman", "SOAPUI", "Backend"],
-    link: "/Kelompok 6_compressed.pdf"
+    link: "/PERSONAL-WEB/Kelompok 6_compressed.pdf"
   },
-  // 7. KELOMPOK 7
   {
     title: "Pengantar Selenium WebDriver",
     description: "Presentasi mendalam mengenai framework open-source Selenium WebDriver untuk automasi pengujian fungsional aplikasi web.",
     tags: ["Selenium", "WebDriver", "Automation", "Browser Testing"],
-    link: "/Kelompok 7.pdf"
+    link: "/PERSONAL-WEB/Kelompok 7.pdf"
   },
-  // 8. KELOMPOK 8
   {
     title: "End-to-End Testing dengan Cypress",
     description: "Pendekatan modern dalam End-to-End testing untuk aplikasi web (React/Vue), mencakup arsitektur, setup, perintah dasar, dan fitur seperti Time Travel.",
     tags: ["Cypress", "E2E Testing", "JavaScript", "Time Travel"],
-    link: "/Kelompok 8_compressed.pdf"
+    link: "/PERSONAL-WEB/Kelompok 8_compressed.pdf"
+  },
+  {
+    title: "Aspek UI/UX Testing",
+    description: "Membahas perbedaan pengujian UI (tampilan visual) dan UX (pengalaman pengguna), mencakup Responsivitas, Kompatibilitas, dan Aksesibilitas.",
+    tags: ["UI/UX", "Usability", "A/B Testing", "Accessibility"],
+    link: "/PERSONAL-WEB/Kelompok 2.pdf"
   },
 ];
 

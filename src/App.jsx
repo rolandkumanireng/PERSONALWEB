@@ -1,7 +1,7 @@
 // src/App.jsx
 
 import React from 'react';
-// KUNCI PERUBAHAN: Ganti BrowserRouter menjadi HashRouter untuk kompatibilitas GitHub Pages
+// MENGGUNAKAN HASHROUTER UNTUK KOMPATIBILITAS GITHUB PAGES
 import { HashRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 
 // Import Komponen Utama
@@ -9,7 +9,7 @@ import Header from './components/Header';
 import Hero from './components/Hero';
 import About from './components/About';
 import Projects from './components/Projects';
-import Contact from './components/Contact';
+// import Contact from './components/Contact'; // DIHAPUS SESUAI PERMINTAAN USER
 import Footer from './components/Footer';
 import PdfViewerPage from './components/PdfViewerPage';
 import ScrollToTop from './components/ScrollToTop';
@@ -20,7 +20,7 @@ const HomeLayout = () => (
         <Hero />
         <About />
         <Projects /> 
-        <Contact /> 
+        {/* Contact dihapus dari layout */}
     </>
 );
 
@@ -29,6 +29,7 @@ function AppContent() {
     const location = useLocation();
     
     // Logika untuk menyembunyikan Header/Footer di halaman PDF Viewer
+    // Ini mencegah tumpang tindih yang terlihat di screenshot sebelumnya.
     const isViewerPage = location.pathname.startsWith('/view/');
 
     return (
@@ -58,7 +59,7 @@ function AppContent() {
 // Komponen Utama yang membungkus HashRouter
 function App() {
     return (
-        // Menggunakan HashRouter (Router yang menggunakan # di URL)
+        // Menggunakan HashRouter sebagai pembungkus
         <Router>
             <ScrollToTop /> 
             <AppContent />

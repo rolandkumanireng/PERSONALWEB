@@ -17,15 +17,12 @@ const Hero = () => {
           
           {/* H1 - Heading Utama (Montserrat SemiBold, 56px) */}
           <h1 className="hero-heading animate-fade-slide delay-1">
-            Membangun <span className="highlight">Solusi Digital</span><br/>
-            dengan Fokus pada Pengalaman Pengguna.
+            Hi, I'm Roland Philip Boli Kumanireng.
           </h1>
           
           {/* Deskripsi (Body Text 18px) */}
           <p className="hero-description animate-fade-slide delay-2">
-            Seorang pengembang [Spesialisasi Anda, misal: Full-Stack Developer] 
-            yang bersemangat menciptakan aplikasi web modern 
-            dan performa tinggi menggunakan React.
+           Welcome to my Portofolio.
           </p>
           
           {/* Call-to-Action Button */}
@@ -33,9 +30,7 @@ const Hero = () => {
             <a href="#projects" className="cta-btn">
               Lihat Proyek Saya
             </a>
-            <a href="#contact" className="text-link">
-              Hubungi Saya
-            </a>
+            
           </div>
         </div>
 

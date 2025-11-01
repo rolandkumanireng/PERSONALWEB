@@ -1,127 +1,55 @@
-/* src/components/Footer.css */
+/* src/components/Footer.css (MODIFIKASI UNTUK GAYA MINIMALIS) */
 
 .site-footer {
-    padding: 60px 0 30px 0; 
-    /* Gunakan warna gelap seperti pada gambar (sedikit lebih gelap dari #181818) */
-    background-color: #1A1A1A; 
-    border-top: 1px solid rgba(255, 255, 255, 0.08); 
+  /* Padding vertikal lebih kecil */
+  padding: 30px 0; 
+  /* Gunakan warna yang sangat gelap */
+  background-color: #1A1A1A; 
+  /* Hapus border atas untuk tampilan yang lebih bersih */
+  border-top: none; 
+}
+
+/* Container utama untuk layout 2 kolom */
+.footer-minimal {
+  display: flex;
+  justify-content: space-between; /* Pisahkan kiri dan kanan */
+  align-items: center;
+  flex-wrap: wrap; /* Penting untuk responsif */
+}
+
+/* --- Kolom Kiri: Hak Cipta --- */
+.footer-copyright p {
+  color: var(--color-teks-sekunder); /* #AAAAAA */
+  font-size: 14px;
+  margin: 0;
+}
+
+/* --- Kolom Kanan: Social Links --- */
+.social-links-minimal {
+  display: flex;
+  gap: 20px; /* Jarak antar link */
+}
+
+.social-links-minimal a {
+  color: var(--color-teks-sekunder);
+  font-size: 14px;
+  font-weight: 400;
+  transition: var(--transisi-default);
+}
+
+.social-links-minimal a:hover {
+  color: var(--color-hover-link); /* #E0E0E0 */
+}
+
+
+/* --- Responsif (Stack di Mobile) --- */
+@media (max-width: 600px) {
+  .footer-minimal {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px; /* Jarak vertikal saat stack */
   }
-  
-  /* --- Layout Grid 4 Kolom (Desktop) --- */
-  .footer-content-grid {
-    display: grid;
-    /* Atur 4 kolom. Kolom pertama (Identitas) lebih lebar */
-    grid-template-columns: 2fr 1fr 1.5fr 1.5fr; 
-    gap: 30px; 
-    margin-bottom: 40px;
-  }
-  
-  /* --- Styling Kolom --- */
-  
-  .footer-col {
-    /* Pastikan semua teks kolom menggunakan warna sekunder (abu-abu) kecuali judul */
-    color: var(--color-teks-sekunder); 
-    font-size: 16px;
-  }
-  
-  .col-title {
-    /* Judul kolom harus lebih menonjol */
-    font-family: var(--font-heading);
-    font-size: 18px;
-    font-weight: 600;
-    color: var(--color-teks-utama); /* Putih */
-    margin-bottom: 15px;
-  }
-  
-  /* List Styling (Menu & Layanan) */
-  .footer-col ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .footer-col ul li {
-    margin-bottom: 8px;
-  }
-  
-  .footer-col a {
-    color: var(--color-teks-sekunder);
-    transition: color 0.3s ease;
-  }
-  
-  .footer-col a:hover {
-    color: var(--color-hover-link);
-  }
-  
-  
-  /* --- Kolom 1: Identitas --- */
-  .footer-identity p {
-    margin: 0;
-    line-height: 1.4;
-  }
-  
-  .brand-name {
-    font-size: 20px;
-    font-weight: 600;
-    color: var(--color-teks-utama);
-  }
-  
-  .project-description {
-    font-size: 14px;
+  .social-links-minimal {
     margin-top: 10px;
   }
-  
-  /* --- Kolom 4: Kontak --- */
-  .footer-contact p {
-    margin: 0 0 8px 0;
-  }
-  
-  
-  /* --- Hak Cipta Bawah --- */
-  .footer-bottom {
-    text-align: center;
-    border-top: 1px solid var(--color-border-halus);
-    padding-top: 20px;
-  }
-  
-  .footer-bottom p {
-    color: var(--color-teks-sekunder);
-    font-size: 14px;
-  }
-  
-  /* --- Responsif (Tablet dan Mobile) --- */
-  @media (max-width: 992px) {
-    .footer-content-grid {
-      /* Turunkan ke 2 kolom di tablet */
-      grid-template-columns: 1fr 1fr;
-    }
-    .footer-col:nth-child(1) {
-      grid-column: 1 / 3; /* Kolom Identitas mengambil lebar penuh */
-      margin-bottom: 30px;
-    }
-    /* Pisahkan Menu & Layanan, Kontak */
-    .footer-col:nth-child(2) { order: 2; }
-    .footer-col:nth-child(3) { order: 3; }
-    .footer-col:nth-child(4) { order: 4; } 
-  }
-  
-  @media (max-width: 576px) {
-    .footer-content-grid {
-      /* Turunkan ke 1 kolom di mobile */
-      grid-template-columns: 1fr;
-      text-align: center;
-    }
-    .footer-col {
-      grid-column: 1 / 2 !important; 
-      margin-bottom: 30px;
-      padding-bottom: 10px;
-      border-bottom: 1px dashed rgba(255, 255, 255, 0.05); /* Garis putus-putus pemisah */
-    }
-    .footer-col:last-child {
-      border-bottom: none;
-      margin-bottom: 0;
-    }
-    .footer-col ul {
-      text-align: center;
-    }
-  }
+}

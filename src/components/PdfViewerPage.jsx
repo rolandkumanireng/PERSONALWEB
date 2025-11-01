@@ -8,14 +8,38 @@ import './PdfViewerPage.css';
 // Note: Key harus tanpa spasi dan disamakan dengan output getProjectId di Projects.jsx
 const projectDataMap = {
     // Key (ID dari URL, spasi diganti underscore) : Link (Nama File Asli)
-    "Kelompok_1-compressed": { title: "Strategi & Klasifikasi Software Testing", link: "/Kelompok 1-compressed.pdf" },
-    "Kelompok_2": { title: "Aspek UI/UX Testing", link: "/Kelompok 2.pdf" },
-    "Kelompok_3": { title: "Penyusunan Testing Plan", link: "/Kelompok 3.pdf" },
-    "Kelompok_4_compressed": { title: "Test Scenario, Test Case & Bug Report", link: "/Kelompok 4_compressed.pdf" },
-    "Kelompok_5": { title: "Prinsip Dasar Unit Testing", link: "/Kelompok 5.pdf" },
-    "Kelompok_6_compressed": { title: "Pengujian API (API Testing)", link: "/Kelompok 6_compressed.pdf" },
-    "Kelompok_7": { title: "Pengantar Selenium WebDriver", link: "/Kelompok 7.pdf" },
-    "Kelompok_8_compressed": { title: "End-to-End Testing dengan Cypress", link: "/Kelompok 8_compressed.pdf" },
+    "Kelompok_1": { 
+        title: "Strategi & Klasifikasi Software Testing", 
+        link: "/PERSONAL-WEB/Kelompok 1-compressed.pdf" 
+    },
+    "Kelompok_2": { 
+        title: "Aspek UI/UX Testing", 
+        link: "/PERSONAL-WEB/Kelompok 2.pdf" 
+    },
+    "Kelompok_3": { 
+        title: "Penyusunan Testing Plan", 
+        link: "/PERSONAL-WEB/Kelompok 2.pdf" 
+    },
+    "Kelompok_4": { 
+        title: "Test Scenario, Test Case & Bug Report", 
+        link: "/PERSONAL-WEB/Kelompok 4_compressed.pdf" 
+    },
+    "Kelompok_5": { 
+        title: "Prinsip Dasar Unit Testing", 
+        link: "/PERSONAL-WEB/Kelompok 5_compressed.pdf" 
+    },
+    "Kelompok_6": { 
+        title: "Pengujian API (API Testing)", 
+        link: "/PERSONAL-WEB/Kelompok 6_compressed.pdf" 
+    },
+    "Kelompok_7": { 
+        title: "Pengantar Selenium WebDriver", 
+        link: "/PERSONAL-WEB/Kelompok 7.pdf" 
+    },
+    "Kelompok_8": { 
+        title: "End-to-End Testing dengan Cypress", 
+        link: "/PERSONAL-WEB/Kelompok 8_compressed.pdf" 
+    },
 };
 
 const PdfViewerPage = () => {

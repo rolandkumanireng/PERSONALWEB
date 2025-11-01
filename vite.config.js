@@ -1,8 +1,13 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
-// ⚠️ Sesuaikan base-nya dengan nama repo GitHub kamu!
+// ✅ PERBAIKAN: Sesuaikan dengan nama repo GitHub yang benar
 export default defineConfig({
   plugins: [react()],
-  base: '/PERSONALWEB/', // <-- wajib diisi sesuai nama repo!
+  base: '/PERSONAL-WEB/', // <-- Nama repo yang sesuai dengan GitHub
+  build: {
+    outDir: 'dist',
+    assetsDir: 'assets',
+    sourcemap: false
+  }
 })
