@@ -43,7 +43,7 @@ const About = () => {
             
            
             
-            <h3 className="sub-heading mt-40">Keahlian Teknis</h3>
+            <h3 className="sub-heading mt-40">Technical Skills</h3>
             <div className="skills-grid">
               <span className="skill-tag">JavaScript</span>
               <span className="skill-tag">React</span>
